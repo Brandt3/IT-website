@@ -1,0 +1,200 @@
+/* ============================================================
+   join.css — Styles specific to the Join page (join.html)
+   Imports alongside the shared ITCLUB.css stylesheet.
+   All shared header, footer, .Meetings, and .row2 styles
+   remain in ITCLUB.css to keep pages consistent.
+   ============================================================ */
+
+/* Page background */
+body {
+    background-color: #AFEEEE;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------------------
+   .JoinHero — Introductory hero banner at top of Join page
+   -------------------------------------------------------- */
+.JoinHero {
+    width: 80%;
+    margin: 40px auto 20px auto;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0px rgba(128, 0, 0, 0.45);
+}
+
+/* Main page heading inside the hero */
+.JoinTitle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.4rem;
+    color: #000000;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+/* Supporting subtitle text inside the hero */
+.JoinSubtitle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.1rem;
+    color: #000000;
+    margin: 0;
+}
+
+/* --------------------------------------------------------
+   .JoinSection — Alternating two-column content rows.
+   Each row holds a .JoinText block and a .JoinImage block.
+   -------------------------------------------------------- */
+.JoinSection {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0px rgba(128, 0, 0, 0.45);
+    padding: 30px 35px;
+    box-sizing: border-box;
+}
+
+/* .LeftText — text on the left, image on the right (default order) */
+.LeftText {
+    flex-direction: row;
+}
+
+/* .RightText — image on the left, text on the right (alternating) */
+.RightText {
+    flex-direction: row-reverse;
+}
+
+/* --------------------------------------------------------
+   .JoinText — Text content block inside a JoinSection
+   -------------------------------------------------------- */
+.JoinText {
+    flex: 1;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    text-align: left;
+}
+
+/* Headings within each section */
+.JoinText h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #800000;
+    padding-bottom: 6px;
+}
+
+/* Paragraph text within each section */
+.JoinText p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* Unordered and ordered list styling within text blocks */
+.JoinText ul,
+.JoinText ol {
+    padding-left: 22px;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Inline hyperlinks within body text */
+.JoinLink {
+    color: #800000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.JoinLink:hover {
+    color: #4d0000;
+}
+
+/* --------------------------------------------------------
+   .JoinImage — Image container inside a JoinSection
+   -------------------------------------------------------- */
+.JoinImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive image that fills its container */
+.JoinImage img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------------------------------------
+   .JoinCTA — Call-to-action card at the bottom of the page
+   -------------------------------------------------------- */
+.JoinCTA {
+    width: 80%;
+    margin: 30px auto 50px auto;
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0px rgba(128, 0, 0, 0.45);
+    padding: 35px 40px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* CTA heading */
+.JoinCTA h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+/* CTA supporting paragraph */
+.JoinCTA p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 22px;
+}
+
+/* Styled email button inside the CTA card */
+.CTAButton {
+    display: inline-block;
+    background-color: #800000;
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: background-color 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.CTAButton:hover {
+    background-color: #4d0000;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------------------------------------------
+   .FooterLink — Styled anchor inside the shared footer
+   -------------------------------------------------------- */
+.FooterLink {
+    color: #AFEEEE;
+    text-decoration: underline;
+}
+
+.FooterLink:hover {
+    color: #ffffff;
+}
