@@ -1,0 +1,429 @@
+/* ============================================================
+   activities.css — Styles specific to the Activities page.
+   Loaded alongside the shared ITCLUB.css stylesheet.
+   All shared header, footer, .Meetings, and .row2 styles
+   remain in ITCLUB.css for cross-page consistency.
+   ============================================================ */
+
+/* Page body — teal background, Times New Roman, black text */
+body {
+    background-color: #AFEEEE; 
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------------------------------------------------
+   .ActHero — Full-width hero banner at the top of the page
+   -------------------------------------------------------- */
+.ActHero {
+    width: 80%;
+    margin: 40px auto 20px auto;
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0px rgba(128, 0, 0, 0.45);
+    padding: 36px 40px;
+    text-align: center;
+    box-sizing: border-box;
+    /* Subtle fade-in on page load */
+    animation: FadeSlideDown 0.6s ease both;
+}
+
+/* Decorative horizontal accent bar flanking the hero title */
+.ActHeroAccent {
+    width: 60px;
+    height: 4px;
+    background-color: #800000;
+    border-radius: 2px;
+    margin: 10px auto;
+}
+
+/* Primary page heading inside hero */
+.ActTitle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2.6rem;
+    color: #000000;
+    margin: 8px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Supporting subheading inside hero */
+.ActSubtitle {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.1rem;
+    color: #333333;
+    margin: 4px 0 0 0;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------
+   @keyframes FadeSlideDown — hero entrance animation
+   -------------------------------------------------------- */
+@keyframes FadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------------
+   .ActSection — Two-column content row.
+   Alternates between .LeftText and .RightText layout.
+   -------------------------------------------------------- */
+.ActSection {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    background-color: #D3D3D3;
+    border-radius: 25px;
+    box-shadow: 10px 10px 0px rgba(128, 0, 0, 0.45);
+    padding: 34px 38px;
+    box-sizing: border-box;
+    /* Staggered entrance animation */
+    animation: FadeSlideUp 0.55s ease both;
+}
+
+/* Text left, image right */
+.LeftText {
+    flex-direction: row;
+}
+
+/* Image left, text right */
+.RightText {
+    flex-direction: row-reverse;
+}
+
+/* --------------------------------------------------------
+   @keyframes FadeSlideUp — section entrance animation
+   -------------------------------------------------------- */
+@keyframes FadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --------------------------------------------------------
+   .ActBadge — Colored status label pill above each heading
+   -------------------------------------------------------- */
+.ActBadge {
+    display: inline-block;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* Upcoming badge — deep red on light tint */
+.Upcoming {
+    background-color: #ffe0e0;
+    color: #800000;
+    border: 1px solid #800000;
+}
+
+/* Completed badge — dark green on light tint */
+.Completed {
+    background-color: #e0f0e0;
+    color: #1a5c1a;
+    border: 1px solid #1a5c1a;
+}
+
+/* Gallery badge — navy on light tint */
+.Gallery {
+    background-color: #e0e8f4;
+    color: #1a2a5c;
+    border: 1px solid #1a2a5c;
+}
+
+/* --------------------------------------------------------
+   .ActText — Text content block inside an ActSection
+   -------------------------------------------------------- */
+.ActText {
+    flex: 1;
+    font-family: "Times New Roman", Times, serif;
+    color: #000000;
+}
+
+/* Section headings with a dark-red underline accent */
+.ActText h3 {
+    font-size: 1.55rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #800000;
+    color: #000000;
+}
+
+/* Body paragraph text */
+.ActText p {
+    font-size: 1rem;
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+/* --------------------------------------------------------
+   .TopicGrid — Responsive grid of planned topic cards
+   -------------------------------------------------------- */
+.TopicGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+/* Individual topic card with lift-on-hover effect */
+.TopicCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #c0c0c0;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.95rem;
+    color: #000000;
+    border-left: 4px solid #800000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    cursor: default;
+}
+
+/* Hover: card lifts slightly with deeper shadow */
+.TopicCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 14px rgba(128, 0, 0, 0.3);
+    background-color: #b8b8b8;
+}
+
+/* Emoji icon inside topic card */
+.TopicIcon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------
+   .ActImage — Image container inside an ActSection
+   -------------------------------------------------------- */
+.ActImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive image with rounded corners and hover zoom */
+.ActImage img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 5px 5px 14px rgba(0, 0, 0, 0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: image gently zooms in */
+.ActImage img:hover {
+    transform: scale(1.03);
+    box-shadow: 7px 9px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --------------------------------------------------------
+   .Timeline — Vertical timeline list for completed topics
+   -------------------------------------------------------- */
+.Timeline {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+
+/* Vertical connecting line running through timeline */
+.Timeline::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background-color: #800000;
+    border-radius: 1px;
+}
+
+/* Single timeline row */
+.TimelineItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Circular dot marker on the timeline line */
+.TimelineDot {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border-radius: 50%;
+    background-color: #800000;
+    border: 3px solid #D3D3D3;
+    margin-top: 3px;
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Hover: dot pulses slightly */
+.TimelineItem:hover .TimelineDot {
+    background-color: #4d0000;
+    transform: scale(1.2);
+}
+
+/* Text block beside each timeline dot */
+.TimelineContent {
+    flex: 1;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* Title of each timeline entry */
+.TimelineContent strong {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* Supporting description of each timeline entry */
+.TimelineContent p {
+    margin: 0;
+    color: #222222;
+    font-size: 0.93rem;
+}
+
+/* --------------------------------------------------------
+   .SectionDivider — Decorative ruled divider between sections
+   -------------------------------------------------------- */
+.SectionDivider {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Horizontal rule on each side of the diamond */
+.DividerLine {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #800000, transparent);
+    border-radius: 1px;
+}
+
+/* Diamond glyph in the center of the divider */
+.DividerDiamond {
+    color: #800000;
+    font-size: 1rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+/* --------------------------------------------------------
+   .GallerySection — Full-width gallery section layout override
+   -------------------------------------------------------- */
+.GallerySection {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* Intro text block at the top of the gallery section */
+.GalleryIntro {
+    text-align: center;
+}
+
+/* Three-column responsive image gallery grid */
+.GalleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 16px;
+}
+
+/* Individual gallery image card with hover lift effect */
+.GalleryItem {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: gallery card lifts and shadow deepens */
+.GalleryItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 10px 22px rgba(128, 0, 0, 0.35);
+}
+
+/* Gallery image fills its card */
+.GalleryItem img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Hover: image zooms slightly within its card */
+.GalleryItem:hover img {
+    transform: scale(1.06);
+}
+
+/* Caption bar that slides up over the image on hover */
+.GalleryCaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(128, 0, 0, 0.78);
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 0.88rem;
+    text-align: center;
+    padding: 7px 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+/* Hover: caption slides into view */
+.GalleryItem:hover .GalleryCaption {
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------------
+   .FooterLink — Styled anchor inside the shared site footer
+   -------------------------------------------------------- */
+.FooterLink {
+    color: #AFEEEE;
+    text-decoration: underline;
+}
+
+.FooterLink:hover {
+    color: #ffffff;
+}

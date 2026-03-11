@@ -1,56 +1,235 @@
 <!DOCTYPE html>
 <html>
-		<head>
-			<link rel="stylesheet" href="ITCLUB.css">
-		</head>
-		<header class="header">
-				<div class="left-section">
-					<img src="SMU logo.png" alt="SMU Logo" class="logo">
-					<h2 class="club-title">IT CLUB</h2>
-				</div>
+    <head>
+        <!-- Link to shared stylesheet and activities-specific stylesheet -->
+        <link rel="stylesheet" href="ITCLUB.css">
+        <link rel="stylesheet" href="activities.css">
+        <title>IT Club - Activities</title>
+    </head>
 
-				<div class="dropdown">
-					<button class="dropbtn">Menu ▾</button>
-					<div class="dropdown-content">
-						<a href="ITCLUB.html">Home</a>
-						<a href="Activities.html">Activities</a>
-						<a href="join.html">Join</a>
-					</div>
-				</div>
-		</header>
+    <!-- Site-wide header with SMU logo, club name, and navigation menu -->
+    <header class="header">
 
-		<body>
-			<div class="Meetings">
-					<p> Meetings every Monday 6:00 P.M. La Salle 1</p>
-			</div>
-			<div class="row1">
-				<div class="col">
-					<h3> Planned topics </h3>
-					<p> The planned topics for the SMU IT Club include hands‑on workshops, collaborative projects, and discussions on emerging technologies that help students build practical skills. The club also plans to host guest speakers and peer‑learning sessions to support members at all experience levels. </p>
+        <div class="left-section">
+            <img src="SMU logo.png" alt="SMU Logo" class="logo">
+            <h2 class="club-title">IT CLUB</h2>
+        </div>
 
+        <div class="dropdown">
+            <button class="dropbtn">Menu ▾</button>
+            <div class="dropdown-content">
+                <a href="ITCLUB.html">Home</a>
+                <a href="Activities.html">Activities</a>
+                <a href="join.html">Join</a>
+            </div>
+        </div>
 
-				</div>
+    </header>
 
-					<div class="col">
-						<h3> Completed </h3>
-						<p> Completed topics include introductory coding sessions, cybersecurity basics, and a walkthrough of essential IT tools used on campus. Members have also participated in collaborative troubleshooting activities that strengthened teamwork and problem‑solving skills. </p>
-					</div>
+    <body>
 
-					<!-- Include some images here -->
-			</div>
+        <!-- Meetings reminder banner -->
+        <div class="Meetings">
+            <p>Meetings every Monday 6:00 P.M. La Salle 1</p>
+        </div>
 
-		</body>
+        <!-- Page hero section with title and decorative accent line -->
+        <div class="ActHero">
+            <div class="ActHeroAccent"></div>
+            <h1 class="ActTitle">Club Activities</h1>
+            <p class="ActSubtitle">Explore what we've done — and what's coming next.</p>
+            <div class="ActHeroAccent"></div>
+        </div>
 
-		<footer>
-	<div class= "row2">
-		<div class="col">
-			<b> &copy; 2025 SMU IT Club <br> All rights reserved. </b>
-		</div>
-		
-		<div class="col">
-			<b> Contact us: <br> Email: smuITclub@gmail.com <br> Phone: 111-111-1111 </b>
-		</div>
-			
-	</div>
+        <!-- ═══════════════════════════════════════════
+             PLANNED TOPICS SECTION — text left, image right
+             ═══════════════════════════════════════════ -->
+        <div class="ActSection LeftText">
 
-</footer>
+            <div class="ActText">
+
+                <!-- Status badge label -->
+                <span class="ActBadge Upcoming">Upcoming</span>
+
+                <h3>Planned Topics</h3>
+                <p>
+                    The SMU IT Club has an exciting lineup of topics designed to give members real,
+                    marketable skills. Sessions are collaborative, beginner-friendly, and always
+                    hands-on.
+                </p>
+
+                <!-- Planned topic cards displayed as a visual list -->
+                <div class="TopicGrid">
+
+                    <div class="TopicCard">
+                        <span class="TopicIcon">⚙️</span>
+                        <span>Web Development Workshop</span>
+                    </div>
+
+                    <div class="TopicCard">
+                        <span class="TopicIcon">🔐</span>
+                        <span>Advanced Cybersecurity</span>
+                    </div>
+
+                    <div class="TopicCard">
+                        <span class="TopicIcon">☁️</span>
+                        <span>Cloud Computing & AWS</span>
+                    </div>
+
+                    <div class="TopicCard">
+                        <span class="TopicIcon">🤖</span>
+                        <span>Intro to Machine Learning</span>
+                    </div>
+
+                    <div class="TopicCard">
+                        <span class="TopicIcon">🗃️</span>
+                        <span>Database Design</span>
+                    </div>
+
+                    <div class="TopicCard">
+                        <span class="TopicIcon">🎤</span>
+                        <span>Guest Speaker Series</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="ActImage">
+                <img src="planned-topics.png" alt="Students planning upcoming IT Club workshops">
+            </div>
+
+        </div>
+
+        <!-- Decorative section divider with center diamond -->
+        <div class="SectionDivider">
+            <div class="DividerLine"></div>
+            <div class="DividerDiamond">◆</div>
+            <div class="DividerLine"></div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════
+             COMPLETED TOPICS SECTION — image left, text right
+             ═══════════════════════════════════════════ -->
+        <div class="ActSection RightText">
+
+            <div class="ActImage">
+                <img src="completed-topics.png" alt="IT Club members during a completed coding session">
+            </div>
+
+            <div class="ActText">
+
+                <!-- Status badge label -->
+                <span class="ActBadge Completed">Completed</span>
+
+                <h3>Completed Topics</h3>
+                <p>
+                    We've already covered a lot of ground this semester. Here's a look at what
+                    members have accomplished together:
+                </p>
+
+                <!-- Timeline list of completed activities -->
+                <ul class="Timeline">
+
+                    <li class="TimelineItem">
+                        <div class="TimelineDot"></div>
+                        <div class="TimelineContent">
+                            <strong>Introductory Coding Sessions</strong>
+                            <p>Covered core programming concepts using Python and JavaScript with live demos.</p>
+                        </div>
+                    </li>
+
+                    <li class="TimelineItem">
+                        <div class="TimelineDot"></div>
+                        <div class="TimelineContent">
+                            <strong>Cybersecurity Basics</strong>
+                            <p>Explored common vulnerabilities, password hygiene, and network security fundamentals.</p>
+                        </div>
+                    </li>
+
+                    <li class="TimelineItem">
+                        <div class="TimelineDot"></div>
+                        <div class="TimelineContent">
+                            <strong>Essential IT Tools Walkthrough</strong>
+                            <p>Hands-on tour of tools used across campus IT environments.</p>
+                        </div>
+                    </li>
+
+                    <li class="TimelineItem">
+                        <div class="TimelineDot"></div>
+                        <div class="TimelineContent">
+                            <strong>Collaborative Troubleshooting</strong>
+                            <p>Team-based problem-solving activities that sharpened real-world diagnostic skills.</p>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Decorative section divider with center diamond -->
+        <div class="SectionDivider">
+            <div class="DividerLine"></div>
+            <div class="DividerDiamond">◆</div>
+            <div class="DividerLine"></div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════
+             PHOTO GALLERY SECTION — full-width image grid
+             ═══════════════════════════════════════════ -->
+        <div class="ActSection GallerySection">
+
+            <div class="ActText GalleryIntro">
+                <span class="ActBadge Gallery">Gallery</span>
+                <h3>Moments from Our Meetings</h3>
+                <p>A snapshot of the IT Club in action.</p>
+            </div>
+
+            <!-- Three-column image gallery grid -->
+            <div class="GalleryGrid">
+
+                <div class="GalleryItem">
+                    <img src="gallery1.png" alt="IT Club members working together at a workshop">
+                    <div class="GalleryCaption">Workshop Session</div>
+                </div>
+
+                <div class="GalleryItem">
+                    <img src="gallery2.png" alt="Guest speaker presenting to IT Club members">
+                    <div class="GalleryCaption">Guest Speaker</div>
+                </div>
+
+                <div class="GalleryItem">
+                    <img src="gallery3.png" alt="IT Club members collaborating on a group project">
+                    <div class="GalleryCaption">Group Project</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+
+    <!-- Site-wide footer with copyright and contact information -->
+    <footer>
+
+        <div class="row2">
+
+            <div class="col">
+                <b>&copy; 2025 SMU IT Club <br> All rights reserved.</b>
+            </div>
+
+            <div class="col">
+                <b>
+                    Contact us: <br>
+                    Email: <a class="FooterLink" href="mailto:smuITclub@gmail.com">smuITclub@gmail.com</a><br>
+                    Phone: 111-111-1111
+                </b>
+            </div>
+
+        </div>
+
+    </footer>
+
+</html>
