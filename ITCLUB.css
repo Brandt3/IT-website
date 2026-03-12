@@ -1,164 +1,195 @@
-nav {	color: white;
-		text-align: right;
-		font-weight: bold;
-		font-size: 70%;
-		word-spacing: 50px;
-		line-height: 50px;
-		font: Times New Roman;
-		width: 95%;
-
-	}
-
-/* Sticky header */
-.header {
-    background-color: #A9A9A9;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+/* ------------------------------
+   NAVIGATION BAR (legacy styling)
+   ------------------------------ */
+nav {
+    color: white;                 /* Text color for nav links */
+    text-align: right;            /* Aligns nav items to the right */
+    font-weight: bold;            /* Makes nav text bold */
+    font-size: 70%;               /* Slightly smaller text size */
+    word-spacing: 50px;           /* Large spacing between nav items */
+    line-height: 50px;            /* Vertical spacing for nav area */
+    font: Times New Roman;        /* Font family */
+    width: 95%;                   /* Nav width relative to page */
 }
 
-/* Left side: logo + title */
+/* ------------------------------
+   STICKY HEADER (logo + title + menu)
+   ------------------------------ */
+.header {
+    background-color: #A9A9A9;    /* Light gray background */
+    display: flex;                /* Flexbox layout for alignment */
+    justify-content: space-between; /* Logo left, menu right */
+    align-items: center;          /* Vertically centers content */
+    padding: 10px 20px;           /* Space around header content */
+    position: sticky;             /* Stays at top while scrolling */
+    top: 0;                       /* Stick to top of viewport */
+    z-index: 1000;                /* Ensures header stays above content */
+}
+
+/* ------------------------------
+   LEFT SECTION (logo + IT CLUB text)
+   ------------------------------ */
 .left-section {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    display: flex;                /* Align logo + title horizontally */
+    align-items: center;          /* Vertically center them */
+    gap: 15px;                    /* Space between logo and title */
 }
 
 .logo {
-    width: 50px;
-    height: 50px;
+    width: 50px;                  /* Logo width */
+    height: 50px;                 /* Logo height */
 }
 
 .club-title {
     font-family: "Times New Roman", serif;
-    font-size: 28px;
-    margin: 0;
+    font-size: 28px;              /* Large title text */
+    margin: 0;                    /* Removes default spacing */
 }
 
-/* Dropdown menu */
+/* ------------------------------
+   DROPDOWN MENU (top-right)
+   ------------------------------ */
 .dropdown {
-    position: relative;
+    position: relative;           /* Needed for absolute-positioned menu */
     display: inline-block;
 }
 
 .dropbtn {
-    background-color: #CC0033; /* SMU Red */
-    color: white;
-    padding: 10px 18px;
+    background-color: #CC0033;    /* SMU Red */
+    color: white;                 /* Button text color */
+    padding: 10px 18px;           /* Button size */
     font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    border: none;                 /* Removes default button border */
+    border-radius: 6px;           /* Rounded corners */
+    cursor: pointer;              /* Pointer cursor on hover */
     font-family: "Times New Roman", serif;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-    border-radius: 6px;
-    z-index: 1001;
+    display: none;                /* Hidden until hovered */
+    position: absolute;           /* Positions menu under button */
+    right: 0;                     /* Aligns menu to right edge */
+    background-color: white;      /* Menu background */
+    min-width: 160px;             /* Minimum menu width */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Soft shadow */
+    border-radius: 6px;           /* Rounded menu corners */
+    z-index: 1001;                /* Above header */
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    color: black;                 /* Link text color */
+    padding: 12px 16px;           /* Menu item spacing */
+    text-decoration: none;        /* Removes underline */
+    display: block;               /* Makes entire row clickable */
     font-family: "Times New Roman", serif;
 }
 
 .dropdown-content a:hover {
-    background-color: #F5F5F5;
+    background-color: #F5F5F5;    /* Light gray hover effect */
 }
 
-/* Hover behavior */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
+/* Change button color on hover */
 .dropdown:hover .dropbtn {
-    background-color: #800000; /* SMU Maroon */
-}	
-
-a {text-decoration: none;}
-
-body {
-		margin: 0;
-		font: Times New Roman;
-		background-color: white;
-		box-sizing: border-box;
-	}
-
-.Meetings {
-    width: fit-content;
-    background-color:#800000 ;
-    box-sizing: border-box;
-    border: 3px solid #800000;  
-    border-radius: 25px;         
-    padding: 5px;               
-    box-shadow: 10px 10px 5px #ccc; 
-    text-align: center;
-    margin: 10px;
-    color: white;
+    background-color: #800000;    /* SMU Maroon */
 }
 
-.row1 .col {
-	background-color:#800000 ;
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+}
+
+/* ------------------------------
+   GLOBAL BODY STYLING
+   ------------------------------ */
+body {
+    margin: 0;                    /* Removes default browser margin */
+    font: Times New Roman;        /* Default font */
+    background-color: white;      /* Page background */
+    box-sizing: border-box;       /* Includes padding/border in width */
+}
+
+/* ------------------------------
+   MEETINGS BUBBLE (red rounded box)
+   ------------------------------ */
+.Meetings {
+    width: fit-content;           /* Shrinks to fit text */
+    background-color: #800000;    /* SMU Maroon background */
     box-sizing: border-box;
-    border: 3px solid #800000;  
-    border-radius: 25px;         
-    padding: 5px;               
+    border: 3px solid #800000;    /* Matching border */
+    border-radius: 25px;          /* Rounded bubble shape */
+    padding: 5px;                 /* Inner spacing */
+    box-shadow: 10px 10px 5px #ccc; /* Drop shadow */
+    text-align: center;           /* Center text */
+    margin: 10px;                 /* Space around bubble */
+    color: white;                 /* White text */
+}
+
+/* ------------------------------
+   ROW 1 COLUMNS (red boxes)
+   ------------------------------ */
+.row1 .col {
+    background-color: #800000;    /* SMU Maroon */
+    box-sizing: border-box;
+    border: 3px solid #800000;
+    border-radius: 25px;
+    padding: 5px;
     box-shadow: 10px 10px 5px #ccc;
     margin: 10px;
     color: white;
 }
 
-
-
+/* ------------------------------
+   ROW LAYOUT (centering rows)
+   ------------------------------ */
 .row1, .row2 {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+    width: 80%;                   /* Centered content width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/* Clear floats for layout stability */
 .row1:after, .row2:after, .Meetings:after {
-	clear : both;
-	content: "";
-	display: table;
+    clear: both;
+    content: "";
+    display: table;
 }
 
-
+/* ------------------------------
+   FOOTER STYLING
+   ------------------------------ */
 .footer {
-    background-color: #0c2f59;
+    background-color: #0c2f59;    /* Dark blue footer */
     color: white;
     padding: 20px 0;
     width: 100%;
 }
 
+/* ------------------------------
+   ROW 2 (footer columns)
+   ------------------------------ */
 .row2 {
     width: 100%;
-	height: 100%;
+    height: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;   /* centers the columns horizontally */
-    align-items: center;       /* aligns text vertically */
-    gap: 80px;                 /* space between the two columns */
-    text-align: center;        /* centers text inside each column */
-	background-color: #0c2f59;
+    display: flex;                /* Horizontal layout */
+    justify-content: center;      /* Center columns */
+    align-items: center;          /* Vertical alignment */
+    gap: 80px;                    /* Space between columns */
+    text-align: center;           /* Center text inside columns */
+    background-color: #0c2f59;    /* Matches footer */
     color: white;
 }
 
 .row2 .col {
     font-family: "Times New Roman", serif;
 }
+
+
 
 
 
