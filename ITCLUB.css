@@ -188,6 +188,11 @@ body {
 .row2 .col {
     font-family: "Times New Roman", serif;
 }
+.row2 .col a{
+    font-family: "Times New Roman", serif;
+    color: #AFEEEE;
+}
+
 
 
 
