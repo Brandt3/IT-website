@@ -109,7 +109,7 @@ a {
 body {
     margin: 0;                    /* Removes default browser margin */
     font: Times New Roman;        /* Default font */
-    background-color: white;      /* Page background */
+    background-color: #AFEEEE;      /* Page background */
     box-sizing: border-box;       /* Includes padding/border in width */
 }
 
@@ -125,7 +125,7 @@ body {
     padding: 5px;                 /* Inner spacing */
     box-shadow: 10px 10px 5px #ccc; /* Drop shadow */
     text-align: center;           /* Center text */
-    margin: 10px;                 /* Space around bubble */
+    margin: 10px auto;            /* Center bubble horizontally */
     color: white;                 /* White text */
 }
 
@@ -141,7 +141,23 @@ body {
     box-shadow: 10px 10px 5px #ccc;
     margin: 10px;
     color: white;
+    /* Contain floated images so the box expands around them */
+    overflow: auto;
 }
+
+.room {
+    width: 250px;
+    float: right;
+    height: auto;
+}
+/* Specifically size the “About” section logo to match the room image used elsewhere */
+.about-logo {
+    float: right;
+    margin: 0 0 12px 12px;
+    max-width: 250px;
+    height: auto;
+}
+
 
 /* ------------------------------
    ROW LAYOUT (centering rows)
