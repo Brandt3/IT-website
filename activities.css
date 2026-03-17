@@ -423,7 +423,10 @@ body {
     color: #AFEEEE;
     text-decoration: underline;
 }
-
+/* --------------------------------------------------------
+   .FooterLink:hover — Hover effect for footer links
+     Changes color to white for better contrast on hover.
+   -------------------------------------------------------- */
 .FooterLink:hover {
     color: #ffffff;
 }
